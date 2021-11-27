@@ -13,5 +13,17 @@ export const programmsData = [
         img: "<i class='fas fa-skull'></i>",
         text: "VIC Soundboard",
         url: "https://aaronweber90.github.io/vic-soundboard/"
+    },
+    {
+        img: "<i class='far fa-hand-scissors'></i>",
+        text: "Rock, Paper, Scissor (Big Bang)",
+        url: "https://aaronweber90.github.io/rock-paper-scissor/"
+    },   
+    {
+        img: "<i class='fas fa-battery-three-quarters'></i>",
+        text: "Energy Meter",
+        url: "https://aaronweber90.github.io/energy-meter/"
     }
 ]
+
+// https://aaronweber90.github.io/rock-paper-scissor/
