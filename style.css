@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eef6f0;
+  height: 100vh;
+  font-family: "Karla", sans-serif;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4em;
+  gap: 0.8em;
+  height: 100vh;
+}
+
+.user-welcome {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.programm {
+  border: 1px solid transparent;
+  width: 70px;
+  display: flex;
+  gap: 0.2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: 200ms;
+}
+
+.programm svg {
+  font-size: 2.8rem;
+}
+
+.programm__text {
+  height: 35px;
+  overflow: hidden;
+}
+
+.programm:hover,
+.programm:focus {
+  background: #aad1b675;
+}
+
+.programm a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.task-bar {
+  background: #fffad1;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  z-index: 1;
+}
+
+.logo-container {
+  font-weight: 600;
+}
+
+.logo-container svg {
+  height: 14px;
+  margin-right: 0.6em;
+}
+
+.task-bar > div:not(.menu-container) {
+  transition: 200ms;
+  padding: 0 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.task-bar > div:hover:not(.menu-container) {
+  background: #d6d2ad;
+  color: hsl(248.2, 75.5%, 49.6%);
+}
+
+.time-container {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-container {
+  position: absolute;
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+  bottom: 0;
+  background: white;
+  transform: translateY(100%);
+  height: 400px;
+  width: 300px;
+  transition: 200ms;
+  opacity: 0;
+  border-top-right-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.menu-active {
+  transform: translate(0%);
+  opacity: 1;
+}
+
+.menu-list {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+}
+
+.menu-list li {
+  margin-bottom: 0.6em;
+}
+
+.submenu-list {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+}
+
+.submenu-list li {
+  border-radius: 8px;
+  padding: 0.5em;
+  background: #eef6f0;
+}
+
+.submenu-list li + li {
+  margin-top: 0.5em;
+}
+
+.submenu-list input,
+.submenu-list select {
+  margin: 0.5em 0;
+}
+
+#screen-saver-input {
+  width: 50%;
+  margin-right: 0.1em;
+}
+
+.username-input {
+  width: 100%;
+}
+
+.screen-saver-container {
+  position: absolute;
+  display: flex;
+  background: black;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  color: white;
+  padding: 2em;
+  font-size: 2rem;
+  animation: mymove 10s infinite;
+}
+
+.screen-saver-inactive {
+  display: none;
+}
+
+.screen-saver-content {
+  margin: 0;
+}
+
+@keyframes mymove {
+  0% {
+    align-items: start;
+    text-align: left;
+    color: #aad1b6;
+  }
+  33% {
+    align-items: start;
+    text-align: right;
+    color: #b5caf9;
+  }
+  66% {
+    align-items: end;
+    justify-content: right;
+    color: #c7b9ff;
+  }
+  99% {
+    align-items: end;
+    justify-content: left;
+    color: #d6d2ad;
+  }
+}
+
+.screensaver {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+.iframe-container {
+  height: 70%;
+  width: 60%;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  top: 10%;
+  left: 25%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  background: white;
+  transition: 200ms;
+}
+
+.iframe-container-mobile {
+  height: 70%;
+  width: 370px;
+}
+
+.iframe-navigation {
+  padding: 0.2em;
+  background: rgb(230, 230, 230);
+  color: rgb(255, 94, 0);
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iframe-navigation button {
+  padding: 0;
+  border: none;
+  font-size: 1rem;
+}
+
+.iframe {
+  height: 100%;
+  border: none;
+}

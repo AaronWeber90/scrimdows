@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="user-welcome">
+            <h1>Welcome to Scrimdows!</h1>
+            <p class="user-welcome__text">Have a nice day!</p>
+        </div>
+
+        <section class="desktop">
+
+            <!-- <div class="programm">
+                <a href="https://scrimba.com/scrim/c6dn2WAy" target="blank">
+                <div class="programm__img"><i class="far fa-hand-scissors"></i></div>
+                <div class="programm__text"><span>Rock, paper scissors</span></div>
+                </a>
+            </div>
+            <div class="programm">
+                <a href="https://scrimba.com/scrim/coc8f4058b33c3586eb797f8c" target="blank">
+                <div class="programm__img"><i class="far fa-smile"></i></div>
+                <div class="programm__text">Emoji Rating</div>
+                </a>
+            </div>
+            <div class="programm">
+                <a href="https://scrimba.com/scrim/co8574b99bd879750d3a852d9" target="blank">
+                <div class="programm__img"><i class="fab fa-jedi-order"></i></div>
+                <div class="programm__text">Star Wars 8-Ball</div>
+                </a>
+            </div> -->
+
+        </section>
+
+        <section class="task-bar">
+            <div class="logo-container">
+                <svg class="ei ei-ag " width="" height="" viewBox="0 0 108 72" fill="#000"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect class="ei ei-ai " x="48" width="60" height="20" rx="10"></rect>
+                    <rect class="ei ei-aj " x="25" y="52" width="60" height="20" rx="10"></rect>
+                    <rect class="ei ei-ak " x="49" y="26" width="36" height="20" rx="10"></rect>
+                    <rect class="ei ei-al " y="52" width="20" height="20" rx="10"></rect>
+                </svg>
+                Scrimdows
+            </div>
+
+            <div class="time-container">
+                <div class="time">12:00</div>
+                <div class="date"></div>
+            </div>
+
+        </section>
+
+        <div class="menu-container">
+            <ul class="menu-list">
+                <li class="profile-menu-btn">Profile</li>
+                <li class="screen-saver-btn">Screensaver</li>
+                <li class="clock-menu-btn">Clock</li>
+                <li class="todo-menu-btn">Todo</li>
+            </ul>
+            <ul class="submenu-list">
+            </ul>
+        </div>
+
+        <div class="screen-saver-container screen-saver-inactive">
+            <p class="screen-saver-content">Scrimdows</p>
+        </div>
+
+    </main>
+
+    <div class="iframe-container">
+        <div class="iframe-navigation">
+            <div class="iframe-navigation__left">
+                <button class="iframe-resize-btn">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                </button>
+            </div>
+            <div class="iframe-navigation__right">
+                <button class="iframe-min-btn">
+                    <i class="far fa-window-minimize"></i>
+                </button>
+                <button class="iframe-max-btn">
+                    <i class="far fa-window-maximize"></i>
+                </button>
+                <button class="iframe-close-btn">
+                    <i class="far fa-window-close"></i>
+                </button>
+            </div>
+        </div>
+        <iframe class="iframe"></iframe>
+    </div>
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
