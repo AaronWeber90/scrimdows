@@ -14,5 +14,9 @@ export default [
 {
     category: "Todo",
     isActive: false
+},
+{
+    category: "Theme",
+    isActive: false
 }
 ]
