@@ -135,6 +135,11 @@ p {
   margin-bottom: 0.6em;
 }
 
+.menu-item-inactive {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .submenu-list {
   width: 50%;
   margin: 0;

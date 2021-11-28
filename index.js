@@ -1,5 +1,7 @@
 import {giveTime, giveDate} from "./scripts/clock-date.js"
 import {programmsData} from "./scripts/programms-data.js"
+import menuData from "./scripts/menu-data.js"
+
 
 // TIME RENDER
 const timeEl = document.querySelector(".time")
@@ -113,3 +115,32 @@ iframeMinBtn.addEventListener("click", minProgramm)
 const iframeResizeBtn = document.querySelector(".iframe-resize-btn")
 iframeResizeBtn.addEventListener("click", iframeResize)
 
+
+//MENU
+const menuBtn = document.querySelector(".logo-container")
+const menuContainer = document.querySelector(".menu-container")
+const menuList = document.querySelector(".menu-list")
+
+function renderMenu() {
+    const menuListData = menuData.map(item => {
+       return `<li class="menu-item-${item.isActive ? "active" : "inactive"}">${item.category}</li>`
+    }).join("")
+    menuList.innerHTML += menuListData
+}
+renderMenu()
+
+function toggleMenu() {
+    menuBtn.addEventListener("click", () => {
+        menuContainer.classList.toggle("menu-active")
+    })
+}
+toggleMenu()
+
+function closeMenuNoFocus() {
+    desktopEl.addEventListener("click", () => {
+        menuContainer.classList.remove("menu-active") 
+})}
+closeMenuNoFocus()
+
+
+// SUBMENU
