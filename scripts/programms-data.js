@@ -23,6 +23,11 @@ export const programmsData = [
         img: "<i class='fas fa-battery-three-quarters'></i>",
         text: "Energy Meter",
         url: "https://aaronweber90.github.io/energy-meter/"
+    },
+    {
+        img: "<i class='fas fa-map-marker-alt'></i>",
+        text: "Travel Page",
+        url: "https://aaronweber90.github.io/austrian-travels/"
     }
 ]
 
