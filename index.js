@@ -1,6 +1,7 @@
 import {giveTime, giveDate} from "./scripts/clock-date.js"
 import {programmsData} from "./scripts/programms-data.js"
 import menuData from "./scripts/menu-data.js"
+import { themeChange } from "./scripts/theme-change.js"
 
 
 // TIME RENDER
@@ -144,3 +145,9 @@ closeMenuNoFocus()
 
 
 // SUBMENU
+
+
+
+
+// THEME CHANGE
+themeChange("theme-scrimba")
