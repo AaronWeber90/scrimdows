@@ -43,7 +43,6 @@ greetingTextEl.innerHTML = `Have a good ${greetingTextVar}.`
 
 
 // PROGRAMMS LOGIC
-
 const desktopEl = document.querySelector(".desktop")
 
 function renderProgramms() {
@@ -150,4 +149,4 @@ closeMenuNoFocus()
 
 
 // THEME CHANGE
-themeChange("theme-scrimba")
+themeChange("theme-ubuntu")
