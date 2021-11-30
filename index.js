@@ -1,8 +1,8 @@
 import {giveTime, giveDate} from "./scripts/clock-date.js"
 import {programmsData} from "./scripts/programms-data.js"
 import menuData from "./scripts/menu-data.js"
-import { themeChange } from "./scripts/theme-change.js"
-
+import {themeChange} from "./scripts/theme-change.js"
+// import {renderBattery} from "./scripts/battery.js"
 
 // TIME RENDER
 const timeEl = document.querySelector(".time")
@@ -150,3 +150,12 @@ closeMenuNoFocus()
 
 // THEME CHANGE
 themeChange("theme-ubuntu")
+
+
+// RENDER BATTERY
+const batteryContainer = document.querySelector(".battery-container")
+const battery = document.querySelector(".battery-container")
+function renderBattery() {
+        //logic here
+}
+renderBattery()
