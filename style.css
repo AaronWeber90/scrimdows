@@ -91,16 +91,14 @@ p {
   z-index: 1;
 }
 
-.logo-container {
-  font-weight: 600;
+.task-bar__left,
+.task-bar__right {
+  display: flex;
+  height: 100%;
 }
 
-.logo-container svg {
-  height: 14px;
-  margin-right: 0.6em;
-}
-
-.task-bar > div:not(.menu-container) {
+.task-bar__left > div,
+.task-bar__right > div {
   transition: 200ms;
   padding: 0 1em;
   height: 100%;
@@ -108,9 +106,28 @@ p {
   align-items: center;
 }
 
-.task-bar > div:hover:not(.menu-container) {
-  background: #d6d2ad;
-  color: hsl(248.2, 75.5%, 49.6%);
+/* .task-bar > div:not(.menu-container) {
+  transition: 200ms;
+  padding: 0 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+} */
+
+.task-bar__left > div:hover,
+.task-bar__right > div:hover {
+  background: var(--color-font);
+  color: var(--color-taskbar);
+  /* border-color: green; */
+}
+
+.logo-container {
+  font-weight: 600;
+}
+
+.logo-container svg {
+  height: 14px;
+  margin-right: 0.6em;
 }
 
 .time-container {
@@ -187,50 +204,6 @@ p {
 
 .username-input {
   width: 100%;
-}
-
-.screen-saver-container {
-  position: absolute;
-  display: flex;
-  background: black;
-  height: 100%;
-  width: 100%;
-  z-index: 2;
-  color: white;
-  padding: 2em;
-  font-size: 2rem;
-  animation: mymove 10s infinite;
-}
-
-.screen-saver-inactive {
-  display: none;
-}
-
-.screen-saver-content {
-  margin: 0;
-}
-
-@keyframes mymove {
-  0% {
-    align-items: start;
-    text-align: left;
-    color: #aad1b6;
-  }
-  33% {
-    align-items: start;
-    text-align: right;
-    color: #b5caf9;
-  }
-  66% {
-    align-items: end;
-    justify-content: right;
-    color: #c7b9ff;
-  }
-  99% {
-    align-items: end;
-    justify-content: left;
-    color: #d6d2ad;
-  }
 }
 
 .screensaver {
@@ -313,4 +286,48 @@ p {
   left: 50%;
   transform: translate(-50%);
   background: var(--color-font);
+}
+
+.screen-saver-container {
+  position: absolute;
+  display: flex;
+  background: black;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  color: white;
+  padding: 2em;
+  font-size: 2rem;
+  animation: mymove 10s infinite;
+}
+
+.screen-saver-inactive {
+  display: none;
+}
+
+.screen-saver-content {
+  margin: 0;
+}
+
+@keyframes mymove {
+  0% {
+    align-items: start;
+    text-align: left;
+    color: #aad1b6;
+  }
+  33% {
+    align-items: start;
+    text-align: right;
+    color: #b5caf9;
+  }
+  66% {
+    align-items: end;
+    justify-content: right;
+    color: #c7b9ff;
+  }
+  99% {
+    align-items: end;
+    justify-content: left;
+    color: #d6d2ad;
+  }
 }
