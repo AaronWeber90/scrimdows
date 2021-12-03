@@ -288,6 +288,26 @@ p {
   background: var(--color-font);
 }
 
+.battery-low {
+  background: orange;
+  animation: battery-low-animation 2s infinite;
+}
+
+@keyframes battery-low-animation {
+  0% {
+    background: orange;
+  }
+  80% {
+    background: transparent;
+  }
+  90% {
+    background: orange;
+  }
+  100% {
+    background: transparent;
+  }
+}
+
 .screen-saver-container {
   position: absolute;
   display: flex;
