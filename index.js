@@ -154,7 +154,7 @@ themeChange("theme-ubuntu")
 
 // RENDER BATTERY
 const batteryContainer = document.querySelector(".battery-container")
-const battery = document.querySelector(".battery-container")
+const battery = document.querySelector(".battery")
 const batteryEnergy = document.querySelector(".battery-energy")
 function renderBattery() {
         //logic here
@@ -162,16 +162,15 @@ function renderBattery() {
 renderBattery()
 
 let batterLvl = 100
+
 function batteryEnergyDrop() {
     batterLvl -= 10
     console.log(batterLvl)
     
 
-
-
     if (batterLvl === 10) {
         clearInterval(batteryDischarge)
-        batteryEnergy.classList.add("battery-low")
+        batteryContainer.classList.add("battery-low")
     }
 
     batteryEnergy.style.height = `${batterLvl}%`
@@ -179,5 +178,11 @@ function batteryEnergyDrop() {
 
 batteryEnergyDrop()
 
+function chargeBattery() {
+    if(batterLvl === 10) {
+        console.log("hi")
+    }
+}
 
+batteryContainer.addEventListener("click", chargeBattery)
 const batteryDischarge = setInterval(batteryEnergyDrop, 500)
