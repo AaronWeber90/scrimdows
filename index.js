@@ -2,6 +2,7 @@ import {giveTime, giveDate} from "./scripts/clock-date.js"
 import {programmsData} from "./scripts/programms-data.js"
 import menuData from "./scripts/menu-data.js"
 import {themeChange} from "./scripts/theme-change.js"
+import {weatherFetch} from "./scripts/weather.js"
 // import {renderBattery} from "./scripts/battery.js"
 
 // TIME RENDER
@@ -156,6 +157,7 @@ themeChange("theme-ubuntu")
 const batteryContainer = document.querySelector(".battery-container")
 const battery = document.querySelector(".battery")
 const batteryEnergy = document.querySelector(".battery-energy")
+
 function renderBattery() {
         //logic here
 }
@@ -164,25 +166,29 @@ renderBattery()
 let batterLvl = 100
 
 function batteryEnergyDrop() {
-    batterLvl -= 10
     console.log(batterLvl)
     
-
-    if (batterLvl === 10) {
-        clearInterval(batteryDischarge)
+    if (batterLvl > 10) {
+        const batteryDischarge = setTimeout(batteryEnergyDrop, 500)
+        batterLvl -= 10
+    } else {
         batteryContainer.classList.add("battery-low")
     }
-
     batteryEnergy.style.height = `${batterLvl}%`
 }
-
 batteryEnergyDrop()
 
 function chargeBattery() {
     if(batterLvl === 10) {
-        console.log("hi")
+        batteryContainer.classList.remove("battery-low")
+        batteryEnergy.style.height = `${100}%`
+        batterLvl = 110
+        batteryEnergyDrop()
     }
 }
 
 batteryContainer.addEventListener("click", chargeBattery)
-const batteryDischarge = setInterval(batteryEnergyDrop, 500)
+
+
+//WEATHER API CALL
+console.log(weatherFetch())

@@ -14,7 +14,8 @@
   --color-background: linear-gradient(to top right, #580b55, #a92120);
   --color-taskbar: #222222;
   --color-menu: #222222ea;
-  --color-programm-hover: #22222293;
+  --color-programm-hover: #222222dc;
+  --color-menu-item-hover: rgba(255, 255, 255, 0.123);
   --color-font: white;
 }
 
@@ -116,8 +117,7 @@ p {
 
 .task-bar__left > div:hover,
 .task-bar__right > div:hover {
-  background: var(--color-font);
-  color: var(--color-taskbar);
+  background: var(--color-menu-item-hover);
 }
 
 .logo-container {
@@ -205,7 +205,7 @@ p {
   width: 100%;
 }
 
-.screensaver {
+/* .screensaver {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -215,7 +215,7 @@ p {
   width: 100vw;
   top: 0;
   left: 0;
-}
+} */
 
 .iframe-container {
   height: 70%;
@@ -263,10 +263,6 @@ p {
   position: relative;
 }
 
-.battery-container:hover .battery {
-  border: 1px solid var(--color-menu);
-}
-
 .battery {
   width: 15px;
   height: 30px;
@@ -304,15 +300,17 @@ p {
   visibility: hidden;
   position: absolute;
   text-align: center;
-  padding: 0.8em 0;
+  padding: 0.8em;
   border-radius: 5px;
   bottom: 130%;
-  left: -50%;
+  right: 50%;
+  transform: translate(50%, 0%);
   width: 120px;
   color: var(--color-font);
   background: var(--color-menu);
   opacity: 0;
   transition: 300ms;
+  font-size: 0.9rem;
 }
 
 .battery-tooltipp::after {
