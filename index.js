@@ -2,7 +2,7 @@ import {giveTime, giveDate} from "./scripts/clock-date.js"
 import {programmsData} from "./scripts/programms-data.js"
 import menuData from "./scripts/menu-data.js"
 import {themeChange} from "./scripts/theme-change.js"
-import {weatherFetch} from "./scripts/weather.js"
+import {renderWeather} from "./scripts/weather.js"
 // import {renderBattery} from "./scripts/battery.js"
 
 // TIME RENDER
@@ -191,4 +191,4 @@ batteryContainer.addEventListener("click", chargeBattery)
 
 
 //WEATHER API CALL
-console.log(weatherFetch())
+renderWeather()

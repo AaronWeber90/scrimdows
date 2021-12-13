@@ -18,5 +18,9 @@ export default [
 {
     category: "Theme",
     isActive: false
+},
+{
+    category: "Music",
+    isActive: false
 }
 ]
