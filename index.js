@@ -127,6 +127,7 @@ function renderMenu() {
        return `<li class="menu-item-${item.isActive ? "active" : "inactive"}">${item.category}</li>`
     }).join("")
     menuList.innerHTML += menuListData
+    renderSubMenu()
 }
 renderMenu()
 
@@ -134,6 +135,7 @@ function toggleMenu() {
     menuBtn.addEventListener("click", () => {
         menuContainer.classList.toggle("menu-active")
     })
+    
 }
 toggleMenu()
 
@@ -145,7 +147,24 @@ closeMenuNoFocus()
 
 
 // SUBMENU
+function renderSubMenu() {
+    const listMenuItems = document.getElementsByClassName("menu-item-active")
 
+    for (let i = 0; i < listMenuItems.length; i++) {
+        listMenuItems[i].addEventListener("mouseover", (event) => renderSubMenu2(event.target))
+    }
+}
+
+function renderSubMenu2(eventVar) {
+    console.log(eventVar.textContent)
+    switch (eventVar) {
+        case "Profile":
+        console.log("working");
+        break
+
+
+    }
+}
 
 
 

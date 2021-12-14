@@ -4,7 +4,7 @@ export function renderWeather() {
         console.log("Geolocation works!")
         
         navigator.geolocation.getCurrentPosition(function(position) {
-            console.log(position.coords.latitude, position.coords.longitude);
+            // console.log(position.coords.latitude, position.coords.longitude);
             const lat = position.coords.latitude
             const lon = position.coords.longitude
 
@@ -17,6 +17,9 @@ export function renderWeather() {
                switch (data.weather[0].main) {
                    case "Clouds":
                    weatherIconVar = `<i class="fas fa-cloud"></i>`
+                   break 
+                   case "Drizzle":  
+                   weatherIconVar = `<i class="fas fa-cloud-rain"></i>`
                    break
                }
             
@@ -28,10 +31,9 @@ export function renderWeather() {
            weatherFetch()
         });
         
-        
-      } else {
-        console.log("Geolocation not working. Try different Browser.")
-      }
+    } else {
+    console.log("Geolocation not working. Try different Browser.")
+    }
 }
 
 // https://levelup.gitconnected.com/combining-api-calls-with-javascript-try-catch-ba1b7b9303a5
